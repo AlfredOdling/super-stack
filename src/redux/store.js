@@ -2,13 +2,15 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import { persistStore } from 'redux-persist'
 import userReducers from './3_reducers/userReducers/userReducers'
-import navigationReducer from './3_reducers/navigationReducer'
+import firebaseReducers from './3_reducers/firebaseReducers/firebaseReducers'
+// import navigationReducer from './3_reducers/navigationReducer'
 // import { persistReducer } from 'redux-persist'
 // import storage from 'redux-persist/es/storage'
 
 const rootReducer = combineReducers({
   userReducers, // Persisting in reducer
-  navigationReducer,
+  firebaseReducers,
+  // navigationReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
