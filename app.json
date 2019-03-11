@@ -25,19 +25,6 @@
     ],
     "ios": {
       "supportsTablet": true
-    },
-    "extra": {
-      "firebase": {
-        "apiKey": "AIzaSyDDGbybsbr390zQSS4Jix-1BJA_bK38wEI",
-        "authDomain": "super-stack-95097.firebaseapp.com",
-        "databaseURL": "https://super-stack-95097.firebaseio.com",
-        "projectId": "super-stack-95097",
-        "storageBucket": "super-stack-95097.appspot.com",
-        "messagingSenderId": "234788549203"
-      },
-      "facebook": {
-        "appId": "1196810150484418"
-      }
     }
   }
 }
