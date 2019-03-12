@@ -30,5 +30,6 @@
   },
   "eslintConfig": {
     "extends": "universe/native"
-  }
+  },
+  "proxy": "http://localhost:80"
 }
