@@ -1,20 +1,20 @@
-import React from 'react';
-import { StyleSheet, View, Dimensions } from 'react-native';
-import { Router, Switch, Route } from './routing';
-import Home from './Home';
-import Pokemon from './Pokemon';
+import React from 'react'
+import { StyleSheet, View, Dimensions } from 'react-native'
+import { Router, Switch, Route } from './routing'
+import Home from './Home'
+import Pokemon from './Pokemon'
 const dimHeight = Dimensions.get('window').height
 const dimWidth = Dimensions.get('window').width
 
 export default class App extends React.Component {
   state = {
-    selectedPokemon: null
-  };
+    selectedPokemon: null,
+  }
   selectPokemon = selectedPokemon => {
     this.setState({
-      selectedPokemon
-    });
-  };
+      selectedPokemon,
+    })
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -41,7 +41,7 @@ export default class App extends React.Component {
           </Router>
         </View>
       </View>
-    );
+    )
   }
 }
 
@@ -60,6 +60,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 50,
     padding: dimWidth * 0.1,
-    margin: dimWidth * 0.1
-  }
-});
+    margin: dimWidth * 0.1,
+  },
+})

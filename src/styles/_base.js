@@ -8,8 +8,8 @@ export const colors = {
 }
 
 export const fonts = {
-  rr: 'roboto-regular',
-  mb: 'montserrat-bold',
+  rr: require('../assets/fonts/Roboto-Regular.ttf'),
+  mb: require('../assets/fonts/Montserrat-Bold.ttf'),
 }
 
 const _spaceMainAxis = {

@@ -2,8 +2,7 @@ import React from 'react'
 import { View } from 'react-native'
 import { connect } from 'react-redux'
 import { Router, Switch, Route } from './routing'
-import { Home } from './Home'
-// import { signInWithFacebook, signInWithGoogle } from './utils/auth/auth'
+import { Home } from './platforms/Home'
 
 const Routes = ({ data }) => {
   return (
