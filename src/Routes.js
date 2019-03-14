@@ -1,9 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
-import { connect } from 'react-redux'
 import { Router, Switch, Route } from './routing'
-import { Home } from './Home'
-// import { signInWithFacebook, signInWithGoogle } from './utils/auth/auth'
+import Home from './Home'
 
 const Routes = ({ data }) => {
   return (
@@ -17,12 +15,4 @@ const Routes = ({ data }) => {
   )
 }
 
-// const mapStateToProps = state => ({
-//   initializeFirebaseReducer: state.firebaseReducers.initializeFirebaseReducer,
-// })
-// const mapDispatchToProps = { _initializeFirebase }
-
-export default connect(
-  undefined,
-  undefined
-)(Routes)
+export default Routes

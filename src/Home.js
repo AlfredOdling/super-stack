@@ -1,8 +1,21 @@
 import React from 'react'
 import { View, Text } from 'react-native'
+import { graphql } from 'react-apollo'
+import { allGames } from './grahql'
 
-export const Home = ({ data }) => (
-  <View style={{ padding: 40 }}>
-    <Text>Hej!</Text>
-  </View>
-)
+const Home = ({ games, loading }) => {
+  console.log('games, loading', games, loading)
+
+  return (
+    <View>
+      <Text>Hej!</Text>
+    </View>
+  )
+}
+
+export default graphql(allGames, {
+  props: ({ data: { loading, allGames } }) => ({
+    loading,
+    games: allGames,
+  }),
+})(Home)
