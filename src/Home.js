@@ -1,21 +1,25 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import { graphql } from 'react-apollo'
-import { allGames } from './grahql'
+import { graphql, compose } from 'react-apollo'
+import { GET_SOME_FIELD, ADD_FIELD } from './grahql/queries'
 
-const Home = ({ games, loading }) => {
-  console.log('games, loading', games, loading)
+const Home = ({ ADD_FIELD, GET_SOME_FIELD }) => {
+  // const { ADD_FIELD, GET_SOME_FIELD } = this.props
+  console.log('props', ADD_FIELD, GET_SOME_FIELD)
 
   return (
     <View>
-      <Text>Hej!</Text>
+      <Text>Hejhejehje</Text>
     </View>
   )
 }
 
-export default graphql(allGames, {
-  props: ({ data: { loading, allGames } }) => ({
-    loading,
-    games: allGames,
-  }),
-})(Home)
+export default compose(
+  graphql(ADD_FIELD, { field: 'hje' }),
+  graphql(GET_SOME_FIELD, {
+    props: ({ data: { loading, someField } }) => ({
+      loading,
+      someField,
+    }),
+  })
+)(Home)
