@@ -1,7 +1,13 @@
-node_modules/**/*
 .expo/*
 npm-debug.*
 
+# Dependencies
+/node_modules
+node_modules/**/*
 
 # Ignore sketch files
 *.sketch
+
+# Production
+/build
+/lambda
